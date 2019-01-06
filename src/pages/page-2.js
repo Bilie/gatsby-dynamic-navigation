@@ -13,4 +13,9 @@ const SecondPage = () => (
   </Layout>
 )
 
+export const frontmatter = {
+  title: 'Page 2',
+  path: 'page-2'
+}
+
 export default SecondPage
