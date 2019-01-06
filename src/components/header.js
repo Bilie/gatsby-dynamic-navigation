@@ -2,6 +2,7 @@ import { StaticQuery, Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 import './header.css'
+import normalizePageName from '../utils/normalizePageName';
 
 const Header = ({ siteTitle }) => (
   <StaticQuery
@@ -58,7 +59,7 @@ const Header = ({ siteTitle }) => (
                       to={page.node.name}
                       className="site-menu-list__link"
                       activeClassName="site-menu-list__link--active">
-                      {page.node.name}
+                      {normalizePageName(page.node.name)}
                     </Link>
                   </li> 
                 )
