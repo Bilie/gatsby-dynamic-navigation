@@ -19,6 +19,17 @@ const Header = ({ siteTitle }) => (
               relativeDirectory
             }
           }
+        },
+        allJavascriptFrontmatter {
+          edges {
+            node {
+              id
+              frontmatter {
+                title
+                path
+              }
+            }
+          }
         }
       }`
     }
@@ -60,6 +71,22 @@ const Header = ({ siteTitle }) => (
                       className="site-menu-list__link"
                       activeClassName="site-menu-list__link--active">
                       {normalizePageName(page.node.name)}
+                    </Link>
+                  </li> 
+                )
+              })
+            }
+            </ul>
+            <ul className="site-menu-list">
+            {
+              data.allJavascriptFrontmatter.edges.map((page) =>{
+                return (
+                  <li className="site-menu-list__item" key={page.node.id}>
+                    <Link
+                      to={page.node.frontmatter.path}
+                      className="site-menu-list__link"
+                      activeClassName="site-menu-list__link--active">
+                      {page.node.frontmatter.title}
                     </Link>
                   </li> 
                 )
