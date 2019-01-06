@@ -30,6 +30,23 @@ const Header = ({ siteTitle }) => (
               }
             }
           }
+        },
+        menuItems: allFile(filter: {
+          sourceInstanceName: {eq: "pages"},
+          name: {regex: "/^(?!index|404).*$/"}
+        }) {
+          edges {
+            node {
+              id
+              name
+              relativeDirectory
+              childJavascriptFrontmatter {
+                frontmatter {
+                  title
+                }
+              }
+            }
+          }
         }
       }`
     }
@@ -87,6 +104,22 @@ const Header = ({ siteTitle }) => (
                       className="site-menu-list__link"
                       activeClassName="site-menu-list__link--active">
                       {page.node.frontmatter.title}
+                    </Link>
+                  </li> 
+                )
+              })
+            }
+            </ul>
+            <ul className="site-menu-list">
+            {
+              data.menuItems.edges.map((page) =>{
+                return (
+                  <li className="site-menu-list__item" key={page.node.id}>
+                    <Link
+                      to={page.node.name}
+                      className="site-menu-list__link"
+                      activeClassName="site-menu-list__link--active">
+                      {page.node.childJavascriptFrontmatter.frontmatter.title}
                     </Link>
                   </li> 
                 )
