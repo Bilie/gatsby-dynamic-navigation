@@ -78,6 +78,7 @@ const Header = ({ siteTitle }) => (
               </Link>
             </h1>
 
+            {/* Menu items with gatsby-source-filesystem */}
             <ul className="site-menu-list">
             {
               data.allFile.edges.map((page) =>{
