@@ -94,6 +94,9 @@ const Header = ({ siteTitle }) => (
               })
             }
             </ul>
+            
+            {/* Menu items with gatsby-source-filesystem and frontmatter */}
+            {/*
             <ul className="site-menu-list">
             {
               data.allJavascriptFrontmatter.edges.map((page) =>{
@@ -110,6 +113,10 @@ const Header = ({ siteTitle }) => (
               })
             }
             </ul>
+            */}
+
+            {/* Menu items with frontmatter */}
+            {/*
             <ul className="site-menu-list">
             {
               data.menuItems.edges.map((page) =>{
@@ -126,6 +133,7 @@ const Header = ({ siteTitle }) => (
               })
             }
             </ul>
+            */}
           </div>
         </div>
       )}
