@@ -63,7 +63,7 @@ const Header = ({ siteTitle }) => (
 
             <ul className="site-menu-list">
             {
-              data.allFile.edges.map((page, i) =>{
+              data.allFile.edges.map((page) =>{
                 return (
                   <li className="site-menu-list__item" key={page.node.id}>
                     <Link
