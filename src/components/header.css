@@ -1,0 +1,35 @@
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-menu-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.site-menu-list__item {
+  margin: 0;
+  margin-right: 8px;
+  padding: 0;
+}
+
+.site-menu-list__item:last-child {
+  margin-right: 0;
+}
+
+.site-menu-list__link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: 0.3s color;
+}
+
+.site-menu-list__link:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.site-menu-list__link--active {
+  color: rgba(255, 255, 255, 1);
+}

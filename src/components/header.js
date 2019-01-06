@@ -1,6 +1,7 @@
 import { StaticQuery, Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
+import './header.css'
 
 const Header = ({ siteTitle }) => (
   <StaticQuery
@@ -29,6 +30,7 @@ const Header = ({ siteTitle }) => (
           }}
         >
           <div
+            className="header__content"
             style={{
               margin: `0 auto`,
               maxWidth: 960,
@@ -47,13 +49,15 @@ const Header = ({ siteTitle }) => (
               </Link>
             </h1>
 
-            <ul>
+            <ul className="site-menu-list">
             {
               data.allFile.edges.map((page, i) =>{
                 return (
-                  <li key={page.node.id}>
+                  <li className="site-menu-list__item" key={page.node.id}>
                     <Link
-                      to={page.node.name}>
+                      to={page.node.name}
+                      className="site-menu-list__link"
+                      activeClassName="site-menu-list__link--active">
                       {page.node.name}
                     </Link>
                   </li> 
