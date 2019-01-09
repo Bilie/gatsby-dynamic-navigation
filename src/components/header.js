@@ -4,6 +4,12 @@ import React from 'react'
 import './header.css'
 import normalizePageName from '../utils/normalizePageName';
 
+const isPartiallyActive = ({ isPartiallyCurrent }) => {
+  return isPartiallyCurrent ?
+    { className: 'site-menu__link site-menu__link--active' } :
+    null
+}
+
 const Header = ({ siteTitle }) => (
   <StaticQuery
     query={graphql`
@@ -86,6 +92,7 @@ const Header = ({ siteTitle }) => (
                   <li className="site-menu-list__item" key={page.node.id}>
                     <Link
                       to={page.node.name}
+                      getProps={isPartiallyActive}
                       className="site-menu-list__link"
                       activeClassName="site-menu-list__link--active">
                       {normalizePageName(page.node.name)}
