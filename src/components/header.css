@@ -34,3 +34,8 @@
 .site-menu-list__link--active {
   color: rgba(255, 255, 255, 1);
 }
+
+.site-menu__link.site-menu__link--active {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
