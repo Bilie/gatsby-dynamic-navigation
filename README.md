@@ -1,5 +1,7 @@
 # Demo Generate Navigation with Gatsby
 
+Article explaining demo: [https://bilianavaleva.com/generate-navigation-with-gatsby](https://bilianavaleva.com/generate-navigation-with-gatsby)
+
 ## Setup
 
 ```bash
