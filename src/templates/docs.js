@@ -10,7 +10,7 @@ export default ({ data }) => {
   return (
     <Layout layoutType="sidebar">
       <SEO title={article.frontmatter.title} />
-      <section className="content__main">
+      <section className="content__main content__main--docs">
         <Sidebar />
         <section dangerouslySetInnerHTML={{ __html: article.html }} />
       </section>

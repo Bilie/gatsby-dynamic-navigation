@@ -6,10 +6,12 @@ import Sidebar from '../components/sidebar'
 const DocsPage = () => (
   <Layout>
     <SEO title="Docs" />
-    <Sidebar />
-    <section>
-      <h1>Introduction</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur sit, architecto, culpa esse placeat quos dignissimos recusandae impedit. Architecto sapiente, laborum cumque animi rem possimus ad quidem illum. Optio, dignissimos!</p>
+    <section className="content__main content__main--docs">
+      <Sidebar />
+      <section>
+        <h1>Introduction</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur sit, architecto, culpa esse placeat quos dignissimos recusandae impedit. Architecto sapiente, laborum cumque animi rem possimus ad quidem illum. Optio, dignissimos!</p>
+      </section>
     </section>
   </Layout>
 )

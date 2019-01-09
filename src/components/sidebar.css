@@ -10,7 +10,11 @@
 
 .sidebar__category {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
+  font-size: 0.7em;
+  color: #515151;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .sidebar__category-list__item {
@@ -20,8 +24,6 @@
 .sidebar-links-list {
   list-style-type: none;
   margin: 0;
-  box-sizing: border-box;
-  padding-left: 16px; 
 }
 
 .sidebar-links-list__item {
@@ -30,11 +32,32 @@
 }
 
 .sidebar-links-list__link {
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 16px;
+  font-size: 1em;
   color: #000;
   text-decoration: none;
 }
 
+.sidebar-links-list__link:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 4px;
+  height: 100%;
+  background-color: cornflowerblue;
+  margin: auto;
+  content: '';
+  transform: scale(0);
+}
+
 .sidebar-links-list__link.sidebar-links-list__link--active {
   color: cornflowerblue;
-  /*font-weight: bold;*/
+}
+
+.sidebar-links-list__link.sidebar-links-list__link--active:before {
+  transform: scale(1);
 }
